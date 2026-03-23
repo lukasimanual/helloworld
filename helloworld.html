@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World - Anton & Hover Effect</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <style>
+    /* Pengaturan Dasar */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('back.jpg'); /* <-- Pastikan nama file ini bener */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; /* Biar rapi */
+      display: flex; /* Mengaktifkan Flexbox */
+      flex-direction: column; /* Mengatur arah tumpukan dari atas ke bawah */
+      justify-content: center; /* Tengah secara vertikal */
+      align-items: center; /* Tengah secara horizontal */
+    }
+
+    /* Pengaturan h1 (Konten Utama) */
+    h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(60px, 12vw, 150px);
+      margin: 0;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+
+      /* CARA BARU: TEKS JADI PEMOTONG */
+      background-color: white; /* Warna kotaknya di sini */
+      color: black; /* Teks harus hitam */
+      mix-blend-mode: screen; /* Ini yang bikin teks jadi "bolong" tembus ke belakang */
+      
+      transition: transform 0.3s ease;
+    }
+
+    /* Hilangkan h1::before kalau pakai cara mix-blend-mode di atas */
+  
+  
+    .teks{
+      color: black;
+      background: white;
+      padding: 3px 8px;
+      margin-top: 20px;
+      max-width: 190px;
+      font-size: 8px;
+      text-align: justify;
+      font-family: Poppins, Sans-Serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="h1" data-aos="fade-left" data-aos-duration="1000">
+    <h1>HELLO WORLD</h1>
+  </div>
+  
+  <div class="teks" data-aos="fade-left" data-aos-duration="1000">
+    <p>not just plain text but as a sign of greeting the world of programming for people who are new to learning to code. </p>
+  </div>
+</body>
+
+<script>
+  AOS.init();
+</script>
+
+</html>
